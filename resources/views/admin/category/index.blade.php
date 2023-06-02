@@ -1,23 +1,13 @@
 @extends('layouts.admin')
 
+
+use Livewire\Component;
+
 @section('content')
+
     
-<div class="row">
-  <div class="col-md-12 ">
+<div>
+  <livewire:admin.category.index />
+</div>
 
-    @if (session('message'))
-      <div class="alert alert-success">{{session('message')}}</div>
-      @endif
- <div class="card">
-    <div class="card-header">
-        <h3> Category
-            <a href="{{url('admin/category/create')}}" class="btn btn-primary btn-sm float-end"> Add Category </a>
-        </h3>
-    </div>
-    <div class="card-body">
-
-    </div>
- </div>
-
-  </div>
   @endsection
